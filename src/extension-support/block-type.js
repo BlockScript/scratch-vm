@@ -57,7 +57,8 @@ const BlockType = {
     XML: 'xml',
 
     /**
-     * A reporter-type block with branch support.
+     * Specialized reporter block that allows for the insertion and evaluation
+     * of a substack.
      */
     INLINE: 'inline'
 };
