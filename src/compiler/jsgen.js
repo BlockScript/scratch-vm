@@ -1215,6 +1215,7 @@ class JSGenerator {
     descendStackForSource (nodes, frame) {
         // Wrapper for descendStack to get the source
         const oldSource = this.source;
+        this.source = '';
         this.descendStack(nodes, frame);
         const stackSource = this.source;
         this.source = oldSource;
