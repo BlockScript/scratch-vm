@@ -1429,6 +1429,12 @@ class Runtime extends EventEmitter {
                 blockJSON.nextStatement = null; // null = available connection; undefined = terminal
             }
             break;
+        case BlockType.INLINE:
+            blockJSON.output = null;
+            blockInfo.disableMonitor = true;
+            blockInfo.branchCount = blockInfo.branchCount || 1;
+            blockJSON.outputShape = ScratchBlocksConstants.OUTPUT_SHAPE_SQUARE;
+            break;
         }
 
         // Check if "blockShape" is specified
